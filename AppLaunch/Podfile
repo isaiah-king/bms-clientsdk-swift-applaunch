@@ -1,8 +1,8 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+#platform :ios, '9.0'
+use_frameworks!
 
 target 'AppLaunch' do
-    use_frameworks!
     platform :ios, '9.0'
     pod 'BMSCore', '~> 2.0'
     pod 'SwiftyJSON'

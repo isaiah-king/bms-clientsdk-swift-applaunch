@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43FBA9371F99715600DA7B79 /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppLaunch.framework; path = "Output/AppLaunch-Debug-iphoneuniversal/AppLaunch.framework"; sourceTree = "<group>"; };
 		480BF7991F763CAA00C70D6C /* AppLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		480BF79C1F763CAB00C70D6C /* AppLaunch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLaunch.h; sourceTree = "<group>"; };
 		480BF79D1F763CAB00C70D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		30C27C85F41EF29AA1B4F499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43FBA9371F99715600DA7B79 /* AppLaunch.framework */,
 				60AA0B9F4AAC555FDCF1D31C /* Pods_AppLaunch.framework */,
 			);
 			name = Frameworks;
@@ -145,6 +147,9 @@
 		480BF7901F763CAA00C70D6C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
@@ -378,6 +383,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Output/AppLaunch-Release-iphoneuniversal",
+				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -404,6 +413,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Output/AppLaunch-Release-iphoneuniversal",
+				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
