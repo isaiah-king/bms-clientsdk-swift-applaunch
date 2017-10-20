@@ -21,7 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		43FBA93B1F99749100DA7B79 /* BMSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FBA93C1F99749100DA7B79 /* BMSCore.framework */; };
+		4332454C1F99984D004D6214 /* BMSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332454D1F99984D004D6214 /* BMSCore.framework */; };
+		4332454F1F999959004D6214 /* AppLaunch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43FBA93E1F9974D700DA7B79 /* AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */; };
 		480BF79E1F763CAB00C70D6C /* AppLaunch.h in Headers */ = {isa = PBXBuildFile; fileRef = 480BF79C1F763CAB00C70D6C /* AppLaunch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		480BF7A51F764C7200C70D6C /* AppLaunchConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7A41F764C7200C70D6C /* AppLaunchConstants.swift */; };
@@ -29,10 +30,24 @@
 		480BF7A91F764FD800C70D6C /* AppLaunchUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7A81F764FD800C70D6C /* AppLaunchUtils.swift */; };
 		480BF7AB1F76574E00C70D6C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7AA1F76574E00C70D6C /* UIDeviceExtension.swift */; };
 		480BF7AD1F765ED400C70D6C /* AppLaunchMsgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7AC1F765ED400C70D6C /* AppLaunchMsgs.swift */; };
-		CA3FDD87BB6A7A7FBEFF3561 /* Pods_AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AA0B9F4AAC555FDCF1D31C /* Pods_AppLaunch.framework */; };
+		E7F8A6ED567A03435079A3A0 /* Pods_AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AA0B9F4AAC555FDCF1D31C /* Pods_AppLaunch.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4332454E1F999917004D6214 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4332454F1F999959004D6214 /* AppLaunch.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4332454D1F99984D004D6214 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BMSCore.framework; path = "../../../../../../../../../Users/izzy/Desktop/git/bms-clientsdk-swift-applaunch/AppLaunch/build/Debug-iphoneos/BMSCore.framework"; sourceTree = SDKROOT; };
 		43FBA9371F99715600DA7B79 /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppLaunch.framework; path = "Output/AppLaunch-Debug-iphoneuniversal/AppLaunch.framework"; sourceTree = "<group>"; };
 		43FBA93C1F99749100DA7B79 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BMSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLaunch.framework; sourceTree = "<group>"; };
@@ -55,9 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4332454C1F99984D004D6214 /* BMSCore.framework in Frameworks */,
 				43FBA93E1F9974D700DA7B79 /* AppLaunch.framework in Frameworks */,
-				43FBA93B1F99749100DA7B79 /* BMSCore.framework in Frameworks */,
-				CA3FDD87BB6A7A7FBEFF3561 /* Pods_AppLaunch.framework in Frameworks */,
+				E7F8A6ED567A03435079A3A0 /* Pods_AppLaunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,7 @@
 		30C27C85F41EF29AA1B4F499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4332454D1F99984D004D6214 /* BMSCore.framework */,
 				43FBA93F1F9974F000DA7B79 /* BMSCore */,
 				43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */,
 				43FBA93C1F99749100DA7B79 /* BMSCore.framework */,
@@ -130,6 +146,22 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		433245501F999B6E004D6214 /* MyApp */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 433245511F999B6E004D6214 /* Build configuration list for PBXLegacyTarget "MyApp" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = MyApp;
+			passBuildSettingsInEnvironment = 1;
+			productName = MyApp;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		480BF7981F763CAA00C70D6C /* AppLaunch */ = {
 			isa = PBXNativeTarget;
@@ -141,6 +173,8 @@
 				480BF7961F763CAA00C70D6C /* Headers */,
 				480BF7971F763CAA00C70D6C /* Resources */,
 				B62190B034B16A90A373AF52 /* [CP] Copy Pods Resources */,
+				4332454E1F999917004D6214 /* CopyFiles */,
+				433245541F999BAD004D6214 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -164,6 +198,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
+					433245501F999B6E004D6214 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					480BF7981F763CAA00C70D6C = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
@@ -189,6 +227,7 @@
 			targets = (
 				480BF7981F763CAA00C70D6C /* AppLaunch */,
 				489F9C001F77920200B4D1B8 /* Frameworks */,
+				433245501F999B6E004D6214 /* MyApp */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +243,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		433245541F999BAD004D6214 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/myfile",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		489F9C041F77935000B4D1B8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +322,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		433245521F999B6E004D6214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D7Y9X89XPS;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		433245531F999B6E004D6214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D7Y9X89XPS;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		480BF79F1F763CAB00C70D6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -317,9 +398,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -372,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -388,10 +469,12 @@
 			baseConfigurationReference = 8327BD995040CE0E7DF6CD64 /* Pods-AppLaunch.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -402,7 +485,7 @@
 				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.AppLaunch;
@@ -420,10 +503,12 @@
 			baseConfigurationReference = 78E4E8142005C6CF854C78C3 /* Pods-AppLaunch.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -434,7 +519,7 @@
 				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.AppLaunch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -447,6 +532,7 @@
 		};
 		489F9C011F77920200B4D1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8327BD995040CE0E7DF6CD64 /* Pods-AppLaunch.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +544,7 @@
 		};
 		489F9C021F77920200B4D1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E4E8142005C6CF854C78C3 /* Pods-AppLaunch.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		433245511F999B6E004D6214 /* Build configuration list for PBXLegacyTarget "MyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433245521F999B6E004D6214 /* Debug */,
+				433245531F999B6E004D6214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		480BF7931F763CAA00C70D6C /* Build configuration list for PBXProject "AppLaunch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

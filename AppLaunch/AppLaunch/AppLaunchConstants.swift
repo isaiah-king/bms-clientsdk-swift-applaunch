@@ -60,7 +60,7 @@ internal let TRUE = "true"
 
 internal let METRIC_CODES = "metricCodes"
 
-internal let CLIENT_SECRET = "clientSecret"
+internal let CLIENT_SECRET = "9a66cecb-cf5d-45c5-a299-320c64867398"
 
 internal let REGION = "region"
 

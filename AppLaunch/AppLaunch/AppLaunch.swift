@@ -131,10 +131,7 @@ private var features:JSON = JSON.null
     deviceData[USER_ID].string = self.userId
     switch type(of: value) {
     case is String.Type:
-        deviceData[attribute].string = value as! String
-        
-    case is Numeric.Type:
-        deviceData[attribute].number = value as! NSNumber
+        deviceData[attribute].string = (value as! String)
         
     case is Bool.Type:
         deviceData[attribute].boolValue = value as! Bool
