@@ -25,7 +25,7 @@ internal class BMSURLSessionDelegate: NSObject {
     
     
     // The user-supplied session delegate
-    internal let parentDelegate: URLSessionDelegate?
+    @objc internal let parentDelegate: URLSessionDelegate?
     
     // The session that this delegate serves.
     internal let bmsUrlSession: BMSURLSession
@@ -37,10 +37,10 @@ internal class BMSURLSessionDelegate: NSObject {
     internal var requestMetadata: RequestMetadata
     
     // Checks if request metadata has already been recorded so that the same request is not logged more than once
-    internal var requestMetadataWasRecorded: Bool = false
+    @objc internal var requestMetadataWasRecorded: Bool = false
     
     // The number of times to resend the original request if it fails to send.
-    internal var numberOfRetries: Int
+    @objc internal var numberOfRetries: Int
     
     
     
@@ -196,7 +196,7 @@ extension BMSURLSessionDelegate: URLSessionDataDelegate {
     // MARK: - Helpers
     
     // Log the request network metadata if it has not been already
-    func recordNetworkMetadata() {
+    @objc func recordNetworkMetadata() {
         
         if !requestMetadataWasRecorded && BMSURLSession.shouldRecordNetworkMetadata {
     

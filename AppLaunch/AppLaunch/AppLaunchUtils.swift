@@ -10,13 +10,13 @@ import Foundation
 
 internal class AppLaunchUtils:NSObject{
     
-    class func saveValueToNSUserDefaults (value:String, key:String) {
+    @objc class func saveValueToNSUserDefaults (value:String, key:String) {
         UserDefaults.standard.set(value, forKey: key)
         UserDefaults.standard.synchronize()
         print("Saving value to NSUserDefaults with Key: \(key) and Value: \(value)")
     }
     
-    class func getValueToNSUserDefaults (key:String) -> String {
+    @objc class func getValueToNSUserDefaults (key:String) -> String {
         var value = ""
         if(UserDefaults.standard.value(forKey: key) != nil){
             value = UserDefaults.standard.value(forKey: key) as! String
@@ -25,14 +25,14 @@ internal class AppLaunchUtils:NSObject{
         return value
     }
     
-    class func validateString(object:String) -> Bool{
+    @objc class func validateString(object:String) -> Bool{
         if (object.isEmpty || object == "") {
             return false;
         }
         return true
     }
     
-    class func saveUserContext(userId:String, applicationId:String, deviceId:String, region:String){
+    @objc class func saveUserContext(userId:String, applicationId:String, deviceId:String, region:String){
         print("Saving user context :: userId:\(userId), applicationId:\(applicationId), deviceId:\(deviceId), region:\(region)")
         UserDefaults.standard.set(userId, forKey: USER_ID)
         UserDefaults.standard.set(deviceId, forKey: DEVICE_ID)
@@ -41,7 +41,7 @@ internal class AppLaunchUtils:NSObject{
         UserDefaults.standard.synchronize()
     }
     
-    class func userNeedsToBeRegistered(userId:String, applicationId:String, deviceId:String, region:String)->Bool{
+    @objc class func userNeedsToBeRegistered(userId:String, applicationId:String, deviceId:String, region:String)->Bool{
         var needsToBeRegistered = true
         var existingUserID = ""
         var existingApplicationId = ""

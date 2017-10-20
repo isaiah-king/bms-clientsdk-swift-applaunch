@@ -16,15 +16,15 @@ private var APP_LAUNCH_SERVER:String = String()
 
 public class AppLaunch:NSObject{
     
-public private(set) var clientSecret: String?
+@objc public private(set) var clientSecret: String?
 
-public private(set) var applicationId: String?
+@objc public private(set) var applicationId: String?
 
-public private(set) var region: String?
+@objc public private(set) var region: String?
 
 private var deviceId = String()
 
-public static let sharedInstance = AppLaunch()
+@objc public static let sharedInstance = AppLaunch()
 
 private var bmsClient = BMSClient.sharedInstance
 
@@ -34,13 +34,13 @@ private var isUserRegistered = false
 
 private var userId:String = String()
     
-private var features:JSON = nil
+private var features:JSON = JSON.null
     
 //
 // ─── INITIALIZE ────────────────────────────────────────────────────────────
 //
     
-public func initializeWithAppGUID (applicationId: String, clientSecret: String, region: String) {
+@objc public func initializeWithAppGUID (applicationId: String, clientSecret: String, region: String) {
     
     if AppLaunchUtils.validateString(object: clientSecret) &&  AppLaunchUtils.validateString(object: applicationId) && AppLaunchUtils.validateString(object: region){
         
@@ -70,7 +70,7 @@ public func initializeWithAppGUID (applicationId: String, clientSecret: String, 
 // ─── REGISTER USER ──────────────────────────────────────────────────────────
 //
 
-public func registerWith(userId:String,completionHandler:@escaping(_ response:String, _ statusCode:Int, _ error:String) -> Void){
+@objc public func registerWith(userId:String,completionHandler:@escaping(_ response:String, _ statusCode:Int, _ error:String) -> Void){
     if(isInitialized) {
         
         if(!AppLaunchUtils.userNeedsToBeRegistered(userId: userId, applicationId: self.applicationId!, deviceId: self.deviceId, region: self.region!)){
@@ -124,7 +124,7 @@ public func registerWith(userId:String,completionHandler:@escaping(_ response:St
 // ─── UPDATE USER ───────────────────────────────────────────────────────────
 //
 
-public func updateUserWith(userId:String,attribute:String,value:Any, completionHandler:@escaping(_ response:String, _ statusCode:Int, _ error:String) -> Void){
+@objc public func updateUserWith(userId:String,attribute:String,value:Any, completionHandler:@escaping(_ response:String, _ statusCode:Int, _ error:String) -> Void){
     
     var deviceData:JSON = JSON()
     deviceData[DEVICE_ID].string = self.deviceId
@@ -224,7 +224,7 @@ public func actions(completionHandler:@escaping(_ features:JSON?, _ statusCode:I
 // ─── FEATURES ──────────────────────────────────────────────────────────────
 //
 
-public func hasFeatureWith(code:String) -> Bool{
+@objc public func hasFeatureWith(code:String) -> Bool{
     var hasFeature = false
     for(key,feature) in self.features{
         if let featureCode = feature["code"].string{
@@ -237,7 +237,7 @@ public func hasFeatureWith(code:String) -> Bool{
 }
 
 
-public func getValueFor(featureWithCode:String,variableWithCode:String) -> String{
+@objc public func getValueFor(featureWithCode:String,variableWithCode:String) -> String{
     for(key,feature) in self.features{
         if let featureCode = feature["code"].string{
             if featureCode == featureWithCode{
@@ -258,7 +258,7 @@ public func getValueFor(featureWithCode:String,variableWithCode:String) -> Strin
 // ─── METRICS ──────────────────────────────────────────────────────────────
 //
 
-public func sendMetricsWith(code:String) -> Void{
+@objc public func sendMetricsWith(code:String) -> Void{
     if(isInitialized && !AppLaunchUtils.userNeedsToBeRegistered(userId: self.userId, applicationId: self.applicationId!, deviceId: self.deviceId, region: self.region!)){
         
         var metricsData:JSON = JSON()

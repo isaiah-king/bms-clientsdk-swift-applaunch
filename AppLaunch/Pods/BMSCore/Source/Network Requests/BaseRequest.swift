@@ -70,35 +70,35 @@ open class BaseRequest: NSObject, URLSessionTaskDelegate {
     
     // MARK: - Constants
     
-    public static let contentType = "Content-Type"
+    @objc public static let contentType = "Content-Type"
     
     
     
     // MARK: - Properties
     
     /// URL that the request is being sent to.
-    public private(set) var resourceUrl: String
+    @objc public private(set) var resourceUrl: String
     
     /// The HTTP method (GET, POST, etc.).
     public let httpMethod: HttpMethod
     
     /// Request timeout measured in seconds.
-    public var timeout: Double
+    @objc public var timeout: Double
     
     /// All request headers.
-    public var headers: [String: String] = [:]
+    @objc public var headers: [String: String] = [:]
     
     /// The query parameters to append to the `resourceURL`.
-    public var queryParameters: [String: String]?
+    @objc public var queryParameters: [String: String]?
     
     /// The request body is set when sending the request via `send(requestBody:completionHandler:)`.
-    public private(set) var requestBody: Data?
+    @objc public private(set) var requestBody: Data?
     
     /// Determines whether request should follow HTTP redirects.
-    public var allowRedirects : Bool = true
+    @objc public var allowRedirects : Bool = true
 	
 	/// Deterimes the cache policy to use for sending request.
-	public var cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy
+	@objc public var cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy
     
     
     
@@ -107,7 +107,7 @@ open class BaseRequest: NSObject, URLSessionTaskDelegate {
     // The old session that handles sending requests. 
     // This will be replaced by `urlSession` once BMSSecurity 3.0 is released.
     // Public access required by BMSSecurity framework.
-    public var networkSession: URLSession?
+    @objc public var networkSession: URLSession?
     
     // The new session that handles sending requests.
     // Meant to replace `networkSession`.
@@ -116,15 +116,15 @@ open class BaseRequest: NSObject, URLSessionTaskDelegate {
     
     // The unique ID to keep track of each request.
     // Public access required by BMSAnalytics framework.
-    open private(set) var trackingId: String = ""
+    @objc open private(set) var trackingId: String = ""
     
     // Metadata for the request.
     // This will obtain a value when the Analytics class from BMSAnalytics is initialized.
     // Public access required by BMSAnalytics framework.
-    public static var requestAnalyticsData: String?
+    @objc public static var requestAnalyticsData: String?
 
     // The current request.
-    var networkRequest: URLRequest
+    @objc var networkRequest: URLRequest
     
 	private static let logger = Logger.logger(name: Logger.bmsLoggerPrefix + "request")
     
@@ -277,7 +277,7 @@ open class BaseRequest: NSObject, URLSessionTaskDelegate {
     
         - returns: The original URL with the query parameters appended to it
     */
-    static func append(queryParameters: [String: String], toURL originalUrl: URL) -> URL? {
+    @objc static func append(queryParameters: [String: String], toURL originalUrl: URL) -> URL? {
         
         if queryParameters.isEmpty {
             return originalUrl

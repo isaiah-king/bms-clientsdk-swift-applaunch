@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		43FBA93B1F99749100DA7B79 /* BMSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FBA93C1F99749100DA7B79 /* BMSCore.framework */; };
+		43FBA93E1F9974D700DA7B79 /* AppLaunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */; };
 		480BF79E1F763CAB00C70D6C /* AppLaunch.h in Headers */ = {isa = PBXBuildFile; fileRef = 480BF79C1F763CAB00C70D6C /* AppLaunch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		480BF7A51F764C7200C70D6C /* AppLaunchConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7A41F764C7200C70D6C /* AppLaunchConstants.swift */; };
 		480BF7A71F764E0B00C70D6C /* AppLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BF7A61F764E0B00C70D6C /* AppLaunch.swift */; };
@@ -32,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		43FBA9371F99715600DA7B79 /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppLaunch.framework; path = "Output/AppLaunch-Debug-iphoneuniversal/AppLaunch.framework"; sourceTree = "<group>"; };
+		43FBA93C1F99749100DA7B79 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BMSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLaunch.framework; sourceTree = "<group>"; };
+		43FBA93F1F9974F000DA7B79 /* BMSCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BMSCore; path = Pods/BMSCore; sourceTree = "<group>"; };
 		480BF7991F763CAA00C70D6C /* AppLaunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppLaunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		480BF79C1F763CAB00C70D6C /* AppLaunch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLaunch.h; sourceTree = "<group>"; };
 		480BF79D1F763CAB00C70D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FBA93E1F9974D700DA7B79 /* AppLaunch.framework in Frameworks */,
+				43FBA93B1F99749100DA7B79 /* BMSCore.framework in Frameworks */,
 				CA3FDD87BB6A7A7FBEFF3561 /* Pods_AppLaunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +76,9 @@
 		30C27C85F41EF29AA1B4F499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43FBA93F1F9974F000DA7B79 /* BMSCore */,
+				43FBA93D1F9974D700DA7B79 /* AppLaunch.framework */,
+				43FBA93C1F99749100DA7B79 /* BMSCore.framework */,
 				43FBA9371F99715600DA7B79 /* AppLaunch.framework */,
 				60AA0B9F4AAC555FDCF1D31C /* Pods_AppLaunch.framework */,
 			);
@@ -149,6 +159,7 @@
 			attributes = {
 				KnownAssetTags = (
 					New,
+					"New-1",
 				);
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = IBM;
@@ -376,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8327BD995040CE0E7DF6CD64 /* Pods-AppLaunch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +398,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Output/AppLaunch-Release-iphoneuniversal",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -396,7 +409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
@@ -406,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78E4E8142005C6CF854C78C3 /* Pods-AppLaunch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +430,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Output/AppLaunch-Release-iphoneuniversal",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = AppLaunch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -424,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.AppLaunch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
@@ -433,7 +448,9 @@
 		489F9C011F77920200B4D1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = AppLaunch;
 			};
@@ -442,7 +459,9 @@
 		489F9C021F77920200B4D1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				PRODUCT_NAME = AppLaunch;
 			};
 			name = Release;
